@@ -1,2 +1,3 @@
 git checkout --theirs .
 git pull --theirs .
+grep -lr '<<<<<<<' . | xargs git checkout --theirs
