@@ -1,0 +1,1 @@
+SELECT *,count(*) as i FROM `table` GROUP BY col  having count(*) > 1
