@@ -1,0 +1,1 @@
+mysqldump -u user_name -p -h host_name db_name table1 table2 > dump.sql
