@@ -1,7 +1,6 @@
 ```
 /etc/init.d/php-fpm restart
 ```
-```
 # OR php 5 fpm:
 ```
 /etc/init.d/php5-fpm restart
