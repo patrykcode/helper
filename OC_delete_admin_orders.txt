@@ -1,0 +1,5 @@
+
+//odpalic w konsoli 
+for(var i =1;i<X;i++){
+    $.post('/index.php?route=api/order/delete&api_token={{token}}&store_id=&order_id='+i);
+}
