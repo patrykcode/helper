@@ -1,0 +1,1 @@
+ALTER TABLE `yamaha_categories` ADD CONSTRAINT `yamaha_categories_ibfk_1` FOREIGN KEY (`id_parent`) REFERENCES `yamaha_categories` (`id`) ON DELETE CASCADE
