@@ -1,6 +1,5 @@
-```
+
 tmux list-sessions //to see what sessions are currently running on tmux.
-```
-```
+
 tmux attach -t n  //(where -t stands for target session and n for that session number).
-``` 
+
