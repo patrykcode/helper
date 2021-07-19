@@ -1,0 +1,6 @@
+
+#Czyszczenie kodu html ze styli css i class
+## Find
+<(h1|h2|h3|h4|h5|b|div|p|span|ul|strong|li|hr|br)[^>]+
+## Replace
+<$1 
