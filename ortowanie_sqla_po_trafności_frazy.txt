@@ -1,0 +1,6 @@
+
+SELECT * ,
+CASE WHEN `name` = 'Bon' THEN 4 
+WHEN `name` like 'Bon%' THEN 3
+WHEN `name` like '%Bon%' THEN 2 END as myRank
+FROM `oc_product_description` WHERE `name` LIKE '%Bon%' ORDER BY myRank DESC
