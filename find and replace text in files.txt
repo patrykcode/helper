@@ -1,0 +1,1 @@
+find ./ -type f -readable -writable -exec sed -i "s/old-text/new-text/g" {} \;
