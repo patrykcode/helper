@@ -1,0 +1,2 @@
+rsync plik_do_wysłania.txt user@domena.pl:/home/users/public_html/katalog (pwd)
+podać hasło do usera
