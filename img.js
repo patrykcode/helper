@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", function () {
       const images = document.querySelectorAll("img");
       for (let i = 0; i < images.length; i++) {
         setParams(images[i]);
-        images[i].onload = setParams;
+        images[i].onload = setParams; 
       }
     }, 1);
   });
