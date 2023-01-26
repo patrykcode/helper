@@ -1,0 +1,4 @@
+
+
+
+find . -name '*.txt' -exec mv {} /home/data/ \;

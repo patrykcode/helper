@@ -1,0 +1,1 @@
+for i in $(find . -name 'uk.php'); do (cd $(dirname $i) ; cp 'uk.php' 'ua.php'); done
