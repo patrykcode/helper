@@ -1,0 +1,11 @@
+wget https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
+tar -xvzf  ioncube_loaders_lin_x86-64.tar.gz 
+php -i | grep extensi
+cd ioncube/
+ll
+cp ioncube_loader_lin_8.1.so /usr/lib/php/20210902
+ll /usr/lib/php/20210902/ioncube_loader_lin_8.1.so
+vim /etc/php/8.1/fpm/php.ini 
+vim /etc/php/8.1/cli/php.ini 
+service php8.1-fpm restart 
+php -v

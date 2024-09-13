@@ -1,2 +1,5 @@
 rsync plik_do_wysłania.txt user@domena.pl:/home/users/public_html/katalog (pwd)
 podać hasło do usera
+
+kod od Andrzeja wysyłanie przez roota z "-e ssh"
+rsync -avhP -e ssh root@greyicon.pl:/home/phlovprod/www/public_html/img/ /home/phlov8/www/public_html/img/

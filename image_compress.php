@@ -1,4 +1,3 @@
-
 <?php
 
 class Tool
@@ -9,17 +8,17 @@ class Tool
 
         array_walk($directors, function ($obj) use ($dir) {
             $data = pathinfo($obj);
-            $path = $dir.$data['basename'];
+            $path = $dir . $data['basename'];
             $realpath = realpath($path);
 
             if (isset($data['extension'])) {
                 if (in_array(strtolower($data['extension']), ['jpg', 'png', 'jpeg'])) {
-                    echo "\n".$realpath;
-                    $this->compress($realpath, 'image/'.strtolower($data['extension']));
+                    echo "\n" . $realpath;
+                    $this->compress($realpath, 'image/' . strtolower($data['extension']));
                 }
             } elseif (is_dir($realpath)) {
-                echo "\n".$path.'/';
-                $this->map($path.'/');
+                echo "\n" . $path . '/';
+                $this->map($path . '/');
             }
         });
     }
@@ -30,11 +29,11 @@ class Tool
         switch ($type) {
             case 'image/jpeg':
             case 'image/jpg':
-               $image = $this->compresJpg($path);
-            break;
+                $image = $this->compresJpg($path);
+                break;
             case 'image/png':
                 $image = $this->compresPng($path);
-            break;
+                break;
         }
     }
 
@@ -43,7 +42,7 @@ class Tool
         try {
             $source = @imagecreatefromjpeg($file);
 
-            @imagejpeg($source, $file, $quality);
+            @imagejpeg($source, str_replace(['.jpg', '.jpeg'], ['_compressed.jpg', '_compressed.jpeg'], $file), $quality);
         } catch (\Exception $e) {
             var_dump($e);
         }
@@ -56,7 +55,7 @@ class Tool
             @imagealphablending($source, false);
             @imagesavealpha($source, true);
 
-            @imagepng($source, $file, $quality, PNG_ALL_FILTERS);
+            @imagepng($source, str_replace('.png', '_compressed.png', $file), $quality, -1);
         } catch (\Exception $e) {
             var_dump($e);
         }
@@ -64,5 +63,5 @@ class Tool
 }
 
 $compress = new Tool();
-// $compress->compress('screenshot2.jpg', 'image/jpeg');
-$compress->map('image/');
+$compress->compress('example-orig.png', 'image/png');
+// $compress->map('image/');
