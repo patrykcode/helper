@@ -1,4 +1,8 @@
 dump bazy z wykluczeniem 2 tabel
 ```
 mysqldump -u user_name -p -h host_name db_name table1 table2 --ignore-table={db_name.table3,db_name.table4 }> dump.sql
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 5655a899d3e1fcbcdf14aa5fcc4da410fac0a297
